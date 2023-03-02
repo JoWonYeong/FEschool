@@ -1,0 +1,90 @@
+html {
+  font-size: 10px;
+}
+
+/* px */
+
+.px {
+  font-size: 20px;
+}
+.px .btn1 {
+  font-size: 20px;
+  padding: 4px 20px;
+  border-radius: 0.2em;
+}
+.px .btn2 {
+  font-size: 40px;
+  padding: 8px 40px;
+  border-radius: 0.2em;
+}
+.px .btn3 {
+  font-size: 80px;
+  padding: 16px 80px;
+  border-radius: 0.2em;
+}
+
+/* em */
+
+.em {
+  font-size: 2em;
+}
+.em .btn1 {
+  font-size: 1em;
+}
+.em .btn2 {
+  font-size: 2em;
+}
+.em .btn3 {
+  font-size: 4em;
+}
+
+.em .btn1,
+.em .btn2,
+.em .btn3 {
+  padding: 0.2em 1em;
+  border-radius: 0.2em;
+}
+
+/* rem */
+
+.rem {
+  font-size: 2rem;
+}
+.rem .btn1 {
+  font-size: 2rem;
+}
+.rem .btn2 {
+  font-size: 4rem;
+}
+.rem .btn3 {
+  font-size: 8rem;
+}
+
+/* padding, radius em으로 설정한 경우 */
+
+.rem .btn1,
+.rem .btn2,
+.rem .btn3 {
+  padding: 0.2em 1em;
+  border-radius: 0.2em;
+}
+
+/* rem 으로 설정할 경우 폰트크기와 padding, radius 비율 맞추려고 따로 설정해야 할 수 있음 */
+/* .rem .btn1 {
+  padding: 0.4rem 2rem;
+  border-radius: 0.4rem;
+}
+
+.rem .btn2 {
+  padding: 0.8rem 4rem;
+  border-radius: 0.8rem;
+}
+
+.rem .btn3 {
+  padding: 1.6rem 8rem;
+  border-radius: 1.6rem;
+} */
+
+a {
+  font-size: 1.6rem;
+}

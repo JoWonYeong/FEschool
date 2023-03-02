@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "KCC-Ganpan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-size: 60px;
+  font-family: "KCC-Ganpan";
+}
+
+.ex1 span {
+  display: inline-block;
+}
+.ex2 span {
+  display: block;
+}
+
+/* 화면 너비 760px 이상이면 한 줄에 표시 */
+@media (min-width: 760px) {
+  .ex2 span {
+    display: inline;
+  }
+}
+
+.ko {
+  word-break: keep-all;
+}
