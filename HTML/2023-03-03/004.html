@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 클래스</title>
+    <style>
+      /* :first-child, :last-child, :nth-child(n) */
+      /* 형제 요소 그룹에서 순서에 따라 요소 선택 */
+      /* n번 째에 없으면 적용 X */
+      li:first-child {
+        color: salmon;
+      }
+
+      li:last-child {
+        color: royalblue;
+      }
+
+      li:nth-child(3) {
+        color: sandybrown;
+      }
+
+      li:nth-child(even) {
+        text-decoration: underline;
+      }
+
+      /* :nth-of-type(n) : 형제 그룹 안에서 순서를 기반으로 형제 요소 선택 */
+      /* 형제 <p> 중 3번 째 요소 */
+      p:nth-of-type(3) {
+        color: rosybrown;
+      }
+
+      /* 형제 그룹 안의 3번 째 자식 태그가 <p>인 요소 - 이 경우 <p>가 없고 <strong> 이어서 적용 X */
+      p:nth-child(3) {
+        color: green;
+      }
+
+      /* div + ' '(공백 - 모든 자식 요소 의미) div 자식 요소 중 n번 째 */
+      div :nth-child(3) {
+        text-decoration: underline;
+      }
+
+      /* 형제 <div> 중 n번 째 요소 */
+      /* 이 경우 존재 X  */
+      div:nth-child(4) {
+        font-size: large;
+      }
+
+      /* :not 부정선택자 */
+      /* li중 첫번 째, 마지막이 아닌 요소 */
+      li:not(:first-child):not(:last-child) {
+        margin: 1rem;
+      }
+
+      /* :root 전역 변수를 선언할 때 사용 */
+      :root {
+        --main-color: hotpink;
+        --pane-padding: 5px 42px;
+      }
+
+      ul {
+        background-color: var(--main-color);
+        padding: var(--pane-padding);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1번째</li>
+      <li>2번째</li>
+      <li>3번째</li>
+      <li>4번째</li>
+      <li>5번째</li>
+      <li>6번째</li>
+      <li>7번째</li>
+      <li>8번째</li>
+      <li>9번째</li>
+      <li>10번째</li>
+    </ul>
+
+    <div>
+      <p>첫번째</p>
+      <p>두번째</p>
+      <strong>세번째</strong>
+      <p>네번째</p>
+      <div>다섯번째</div>
+      <p>여섯번째</p>
+      <p>일곱번째</p>
+      <p>여덟번째</p>
+      <p>아홉번째</p>
+      <p>열번째</p>
+    </div>
+  </body>
+</html>

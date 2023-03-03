@@ -1,0 +1,40 @@
+<title>말줄임 처리</title>
+<head>
+  <style>
+    p {
+      width: 50%;
+      border: 2px solid #ccc;
+    }
+
+    .ellipsis {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .multi-ellipsis {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+  </style>
+</head>
+
+<p>
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste ducimus
+  sapiente quidem! Velit et officia, temporibus ad natus quo. Quae at similique
+  deserunt modi minima ipsum debitis blanditiis ipsa facere!
+</p>
+
+<p class="ellipsis">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste ducimus
+  sapiente quidem! Velit et officia, temporibus ad natus quo. Quae at similique
+  deserunt modi minima ipsum debitis blanditiis ipsa facere!
+</p>
+
+<p class="multi-ellipsis">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste ducimus
+  sapiente quidem! Velit et officia, temporibus ad natus quo. Quae at similique
+  deserunt modi minima ipsum debitis blanditiis ipsa facere!
+</p>
