@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>border-box model</title>
+    <style>
+      @font-face {
+        font-family: "TTTtangsbudaejjigaeB";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2")
+          format("woff2");
+        font-weight: 700;
+        font-style: normal;
+      }
+      .text-box h1 {
+        font-family: "TTTtangsbudaejjigaeB";
+        margin: 0;
+        text-align: center;
+      }
+      .text-box {
+        background-image: url(https://github.com/stronger-deer/myBlog/blob/main/img/main-visual.jpg?raw=true);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+      /* 특정 선택자 ^='val' : 'val'로 시작하는 요소 선택 */
+      div[class^="box"] {
+        box-sizing: border-box;
+        width: 300px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      /* div:not(:first-child) */
+      div ~ div {
+        margin-top: 20px;
+      }
+
+      .box1 {
+        background-color: #343f50;
+        color: white;
+      }
+
+      .box2 {
+        background-color: #343f50;
+        box-shadow: inset 15px 15px #4a5568;
+        color: white;
+        border: 10px solid #000;
+      }
+
+      .box3 {
+        border-radius: 50px;
+        border: 5px dashed plum;
+        background-color: lightgoldenrodyellow;
+        background-clip: padding-box;
+      }
+
+      .box4 {
+        border-radius: 0 50px 50px 50px;
+        border: 3px solid lightgray;
+        box-shadow: 10px 10px 10px 0px lightgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-box"><h1>배경을 적용해 보자</h1></div>
+
+    <div class="box1">Hello☆</div>
+    <div class="box2">Hello☆</div>
+    <div class="box3">Hello☆</div>
+    <div class="box4">Hello☆</div>
+  </body>
+</html>
