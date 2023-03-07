@@ -1,0 +1,57 @@
+.login-box {
+  box-sizing: border-box;
+  border: 2px solid lightgrey;
+  width: 500px;
+  /* height: 250px; */
+  border-radius: 10px;
+  padding: 30px;
+}
+.info {
+  font-weight: bold;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.login-button {
+  display: block;
+  text-align: center;
+  background-color: rgb(108, 68, 183);
+  border-radius: 10px;
+  margin: 16px 0;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+}
+.login-button > img {
+  height: 24px;
+  vertical-align: middle;
+}
+.login-left {
+  display: inline-block;
+  height: 20px;
+}
+.login-right {
+  display: block;
+  float: right;
+  height: 20px;
+}
+.login-left > a,
+.login-right > a {
+  color: grey;
+}
+.login-left > img,
+.login-right > img {
+  width: 20px;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
