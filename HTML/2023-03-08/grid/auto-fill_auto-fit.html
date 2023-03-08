@@ -20,6 +20,12 @@
         height: 100px;
         border: 10px solid royalblue;
       }
+      /* 
+      최소값 이상의  가로 길이를 가지는 컨텐츠로 가능한 많은 column(세로줄)을 배치하고 싶을 때 
+      repeat() 사용할 때 반복횟수 고정하지 않고
+      1. auto-fill : 최소값 이상의 가능한 많은 column 배치, 빈공간 생김
+      2. auto-fit : 최소값 이상의 가능한 많은 column 배치하지만, 빈공간 생기면 (최대 column 수보다 요소 수가 작을 때) 그 공간을 각 요소가 나눠 가짐(늘어남)
+      */
 
       .autofill {
         grid-template-columns: repeat(auto-fill, minmax(100px, auto));
