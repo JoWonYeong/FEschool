@@ -1,0 +1,44 @@
+body {
+  background-image: url(images/bg.png);
+  font-size: 10px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 300px;
+  margin: 15vh auto;
+}
+
+.item {
+  background-color: #93572e;
+  background-image: url(images/green.png);
+  background-repeat: no-repeat;
+  padding: 4rem 1rem 2rem 1rem;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0px 10px 0px 0px rgba(74, 38, 11, 1);
+}
+
+.character {
+  width: 100%;
+  height: 300px;
+}
+
+.character-image {
+  background-image: url(images/animal07.png);
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.text {
+  color: white;
+  font-size: 1rem;
+  opacity: 0.7;
+}
