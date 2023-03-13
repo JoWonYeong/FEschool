@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button 실습하기</title>
+    <style>
+      button {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+      }
+      [class^='btn'] {
+        width: 88px;
+        height: 32px;
+        padding: 9px 25px;
+        font-weight: 700;
+        font-size: 12px;
+        border: 1px solid #1a202c;
+        background-color: #343f50;
+        box-shadow: inset 1px 1px 0px #4a5568;
+      }
+      .btn-positive {
+        color: #439aff;
+      }
+      .btn-negative {
+        color: #eb5757;
+      }
+      [class^='btn']:not(:disabled):hover {
+        text-decoration: underline;
+        color: white;
+      }
+      [class^='btn']:active {
+        box-shadow: inset 1px 1px 0px #262f3e;
+        color: white;
+      }
+      .btn-positive:hover {
+        background-color: #439aff;
+        border: 1px solid #439aff;
+        box-shadow: inset 1px 1px 0px #73b4ff;
+      }
+      .btn-positive:active {
+        box-shadow: inset 1px 1px 0px #3b78be;
+      }
+      .btn-negative:hover {
+        background-color: #eb5757;
+        border: 1px solid #eb5757;
+        box-shadow: inset 1px 1px 0px #fd6f6f;
+      }
+      .btn-negative:active {
+        box-shadow: inset 1px 1px 0px #d94242;
+      }
+      [class^='btn']:disabled {
+        color: #4a5568;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Button</button>
+    <button class="btn-positive">Yes</button>
+    <button class="btn-negative">Del</button>
+    <button class="btn" disabled>Button</button>
+  </body>
+</html>
