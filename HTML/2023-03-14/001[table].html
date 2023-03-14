@@ -1,0 +1,113 @@
+<!-- 
+  border-collapse:collapse : table 요소 border 겹치게 (두줄X)
+  table-layout:fixed : width 내에서 같은 너비로 col 배치
+  scope="col","row" : 웹 접근성 위해서 <th>의 값들이 col로 읽어야 되는지, row로 읽어야 되는지 명시
+  id-headers : scope방식 쓰기 너무 복잡한 경우 명학하게 연결하는 방법
+  <colgroup> : 같은 col끼리 속성을 줄 때 사용 (같은 row는 가상선택자로 접근 가능)
+            하위 <col>에서 몇 개의 col로 나눌 건지 span으로 설정
+ -->
+
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table 만들기</title>
+    <style>
+      caption {
+        caption-side: bottom;
+        margin-top: 15px;
+      }
+      table {
+        width: 100%;
+        border: 2px solid black;
+        /* table 요소 border 겹치게 (padding 없게) */
+        border-collapse: collapse;
+        /* width에서 열별로 같은 너비 배치 */
+        table-layout: fixed;
+      }
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th {
+        background-color: #eee;
+      }
+      td {
+        text-align: center;
+      }
+      tfoot tr {
+        font-weight: bold;
+      }
+      .col-first {
+        width: 100px;
+      }
+      .col-width {
+        background-color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        2023 학년도 대학수능능력시험 성적통지표
+      </caption>
+      <colgroup>
+        <col class="col-first" />
+        <col />
+        <col span="5" class="col-width" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th scope="col" rowspan="2">한국사 영역</th>
+          <th scope="col">국어 영역</th>
+          <th scope="col">수학 영역</th>
+          <th scope="col" rowspan="2">영어영역</th>
+          <th scope="col" colspan="2">탐구영역</th>
+          <th scope="col">제2 외국어/한문영역</th>
+        </tr>
+        <tr>
+          <th scope="row">선택과목</th>
+          <th scope="col">화법과 작문</th>
+          <th scope="col">확률과 통계</th>
+          <th scope="col">생활과 윤리</th>
+          <th scope="col">지구과학 1</th>
+          <th scope="col">독일어</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">표준점수</th>
+          <td rowspan="2">없음</td>
+          <td>131</td>
+          <td>137</td>
+          <td rowspan="2">없음</td>
+          <td>53</td>
+          <td>64</td>
+          <td rowspan="2">없음</td>
+        </tr>
+        <tr>
+          <th scope="row">백분위</th>
+          <td>93</td>
+          <td>95</td>
+          <td>75</td>
+          <td>93</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row">등급</th>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
