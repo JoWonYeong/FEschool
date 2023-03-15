@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  background-color: #fffaf0;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* a - button */
+
+[class^='btn-a'] {
+  display: inline-block;
+  padding: 1em 1em 1em 2.8em;
+  text-decoration: none;
+  color: #5a6a72;
+}
+.btn-a-join {
+  background-image: url(./../img/icon-join.svg);
+  background-repeat: no-repeat;
+  /* 배경 이미지 왼쪽에서 0.8em 띄우고, 세로로 중앙 정렬 */
+  background-position: 0.8em center;
+  /* 배경 이미지 사이즈 */
+  background-size: 2em;
+  /* background: url(./../img/icon-join.svg) no-repeat 0.8em center / 2em; */
+}
+
+.btn-a-login {
+  background: url('./../img/icon-login.svg') no-repeat 0.8em center / 2em;
+}
+.btn-a-logout {
+  background: url('./../img/icon-logout.svg') no-repeat 0.8em center / 2em;
+}
+
+/* button */
+
+.btn-black-submit {
+  display: block;
+  width: 100%;
+  height: 48px;
+  background-color: #29363d;
+  border: none;
+  color: #f4f5f5;
+  border-radius: 4px;
+}
+
+.btn-black-submit:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn-black-submit:disabled {
+  background-color: #9fa9ae;
+}
+
+/* form */
+
+.label-info,
+.input-info {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.label-info {
+  display: block;
+  width: 100%;
+  /* height: 73px; */
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.7px;
+  color: #29363d;
+}
+
+.input-info {
+  border: none;
+  /* border-bottom: 1px solid #677880; */
+  box-shadow: 0 1px 0 0 #677880;
+  margin-top: 8px;
+  width: 100%;
+  height: 48px;
+  background-color: white;
+  transition: border 0.2s;
+  border-radius: 4px 4px 0 0;
+  padding: 0 16px;
+  transition: box-shadow 0.2s ease;
+  font-size: 16px;
+}
+
+.input-info:hover {
+  /* border-color: #2e6ff2;
+  border-bottom-width: 2px; */
+  box-shadow: 0 2px 0 0 #2e6ff2;
+}
+
+.input-info:focus {
+  outline: none;
+  /* border: 2px solid #2e6ff2; */
+  box-shadow: 0 0 0 2px #2e6ff2;
+  border-radius: 4px;
+}
+
+/* layout ------------------------------- */
+
+/* header */
+
+header {
+  background-color: white;
+}
+.header-wrap {
+  width: 1224px;
+  width: calc(100% - 60px);
+  height: 120px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 75px;
+}
+
+.hello {
+  display: inline-block;
+}
+.hello strong {
+  box-shadow: inset 0 -0.6em rgba(255, 79, 110, 0.5);
+}
