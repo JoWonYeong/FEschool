@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>img srcset 속성</title>
+</head>
+
+<body>
+  <!-- srcset 속성 
+  - 여러 해상도에 대응하여 브라우저가 최상의 이미지를 로딩
+  - 다양한 크기를 가지는 동일 이미지 2개 이상 사용
+  - 브라우저에게 이미지 선택권 위임 -->
+
+  <!-- 화면의 화소에 따라 이미지 선택 -->
+  <!-- '개발자도구 - 네트워크'에서 어떤 이미지 로딩됐는 지 확인 가능 (캐시사용중지) -->
+
+
+  <!-- 1. x 서술자 
+    - 디바이스 화소 밀도에 따라 이미지 로딩
+    - 콘솔에 window.devicePixelRatio 명령어로 화소밀도 알 수 있음 -->
+  <!-- <img srcset="images/rabbit_300.png 2x, images/rabbit_500.png 3x" src="images/rabbit_150.png" alt="귀여운 털뭉치"> -->
+
+
+  <!-- 2. w 서술자
+  - 원본 이미지의 너비 브라우저에게 알려줌
+  - 이를 바탕으로 브라우저가 적절한 이미지 선택하게 함
+  - px 이 아니라 w 로 표기(뜻은 px 맞음) -->
+
+  <!-- <img srcset="images/rabbit_500.png 500w,
+        images/rabbit_300.png 300w" src="images/rabbit_150.png" alt="test"> -->
+
+
+  <!-- 3. sizes 속성
+        - 뷰포트의 조건에 따라 이미지가 UI 안에서 차지하게 될 사이즈 브라우저에게 알려줌
+        - 조건에 따른 이미지 크기 설정 -->
+
+  <img srcset="images/rabbit_500.png 500w, images/rabbit_300.png 300w, images/rabbit_150.png 150w"
+    sizes="(min-width:960px) 250px, (min-width:620px) 150px, 300px" src="images/rabbit_150.png" alt="">
+</body>
+
+</html>

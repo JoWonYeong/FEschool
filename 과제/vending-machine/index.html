@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자판기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1 class="logo">
+    <img src="./img/logo.svg" alt="자판기">
+  </h1>
+
+  <div class="container">
+    <h2 class="a11y-hidden">음료 선택</h2>
+
+    <section class="container-vending1">
+      <div class="menu">
+        <button class="card cola0">
+          <img src="./img/menu/cola-0.svg" alt="cola0">
+          <p>Original_Cola</p>
+          <div><span>1000</span>원</div>
+        </button>
+        <button class="card cola1 soldout">
+          <img src="./img/menu/cola-1.svg" alt="cola1">
+          <p>Cool_Cola</p>
+          <div><span>1000</span>원</div>
+        </button>
+        <button class="card cola2">
+          <img src="./img/menu/cola-2.svg" alt="cola2">
+          <p>Violet_Cola</p>
+          <div><span>1000</span>원</div>
+        </button>
+        <button class="card cola3 ">
+          <img src="./img/menu/cola-3.svg" alt="cola3">
+          <p>Green_Cola</p>
+          <div><span>1000</span>원</div>
+        </button>
+        <button class="card cola4">
+          <img src="./img/menu/cola-4.svg" alt="cola4">
+          <p>Yellow_Cola</p>
+          <div><span>1000</span>원</div>
+        </button>
+        <button class="card cola5">
+          <img src="./img/menu/cola-5.svg" alt="cola5">
+          <p>Orange_Cola</p>
+          <div><span>1000</span>원</div>
+        </button>
+      </div>
+      <div class="info-btn-set">
+        <div class="show-money">잔액 : <span> <span class="show-money-remained">1,000</span> 원</span></div>
+        <button class="btn-white-return">거스름돈 반환</button>
+      </div>
+      <div class="info-btn-set">
+        <input type="number" class="input-money" placeholder="입금액 입력">
+        <button class="btn-white-input">입금</button>
+      </div>
+      <div class="info-btn-set">
+        <div class="vending1-obtained">
+          <div class="obtained-element">
+            <span>
+              <img class="obtained-element-img" src="./img/menu/cola-0.svg" alt="cola0">
+              <span class="obtained-element-name">Original_Cola</span>
+            </span>
+            <span class="obtained-element-count">1</span>
+          </div>
+          <div class="obtained-element">
+            <span>
+              <img class="obtained-element-img" src="./img/menu/cola-2.svg" alt="cola2">
+              <span class="obtained-element-name">Violet_Cola</span>
+            </span>
+            <span class="obtained-element-count">2</span>
+          </div>
+          <div class="obtained-element">
+            <span>
+              <img class="obtained-element-img" src="./img/menu/cola-3.svg" alt="cola3">
+              <span class="obtained-element-name">Green_Cola</span>
+            </span>
+            <span class="obtained-element-count">1</span>
+          </div>
+
+        </div>
+        <button class="btn-obtain">획득</button>
+      </div>
+    </section>
+
+    <section class="container-vending2">
+      <div class="vending2-top">
+        <div class="show-money">소지금 :
+          <span> <span class="show-money-having">25,000</span> 원</span>
+        </div>
+      </div>
+      <div class="vending2-bottom">
+        <span>획득한 음료</span>
+        <div class="vending2-obtained">
+          <div class="obtained-element">
+            <img class="obtained-element-img" src="./img/menu/cola-0.svg" alt="cola0">
+            <span class="obtained-element-name">Original_Cola</span>
+            <span class="obtained-element-count">1</span>
+          </div>
+          <div class="obtained-element">
+            <img class="obtained-element-img" src="./img/menu/cola-3.svg" alt="cola3">
+            <span class="obtained-element-name">Green_Cola</span>
+            <span class="obtained-element-count">2</span>
+          </div>
+          <div class="obtained-element">
+            <img class="obtained-element-img" src="./img/menu/cola-5.svg" alt="cola5">
+            <span class="obtained-element-name">Orange-Cola</span>
+            <span class="obtained-element-count">1</span>
+          </div>
+          <div class="obtained-element">
+            <img class="obtained-element-img" src="./img/menu/cola-2.svg" alt="cola2">
+            <span class="obtained-element-name">Violet-Cola</span>
+            <span class="obtained-element-count">5</span>
+          </div>
+        </div>
+        <span>총금액 :
+          <span><span class="show-money-total">9,000</span> 원</span>
+        </span>
+      </div>
+
+    </section>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
