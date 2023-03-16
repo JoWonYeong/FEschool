@@ -13,10 +13,10 @@ for (let i = 0; i < card.length; i++) {
     });
 
     if (e.target.nodeName != 'BUTTON') {
-      if (e.target.nodeName == 'SPAN') {
-        e.target.parentNode.parentNode.classList.add('purple');
-      } else {
+      if (e.target.parentNode.nodeName == 'BUTTON') {
         e.target.parentNode.classList.add('purple');
+      } else {
+        e.target.parentNode.parentNode.classList.add('purple');
       }
     } else {
       !soldout && e.target.classList.add('purple');
