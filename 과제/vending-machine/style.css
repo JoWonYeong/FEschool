@@ -51,7 +51,7 @@ body {
 .logo {
   text-align: center;
 }
-.logo > img {
+.logo img {
   cursor: pointer;
   width: 386px;
   height: 180px;
@@ -317,7 +317,7 @@ body {
     background-color: white;
   }
 
-  .logo > img {
+  .logo img {
     width: max(166px, calc(100% - 500px));
     height: auto;
   }
