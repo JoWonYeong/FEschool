@@ -1,0 +1,135 @@
+/* ------ reset ------ */
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+ul,
+li {
+  list-style: inside;
+}
+img {
+  vertical-align: top;
+}
+
+body {
+  background-color: #673399;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+
+  /* font-weight: 500; */
+  /* font-weight: 700; */
+}
+
+/* ------ layout ------ */
+.l_layout {
+  display: flex;
+  width: 100%;
+}
+.l_layout > :nth-child(1) {
+  width: 26%;
+  flex-shrink: 0;
+}
+
+/* ------ header ------ */
+header {
+  box-shadow: inset 0px 0px 0px 2px red;
+  width: 1080px;
+  margin: 100px auto;
+}
+
+h1 {
+  box-shadow: inset 0px 0px 0px 2px lightcoral;
+  font-size: 40px;
+  color: white;
+  font-weight: 500;
+}
+h1 > span {
+  background: linear-gradient(180deg, transparent 50%, orangered 50%);
+}
+p {
+  box-shadow: inset 0px 0px 0px 2px lightcyan;
+  font-size: 14px;
+  color: #bd8fe8;
+  /* position: relative; */
+}
+p::before {
+  /* position: absolute; */
+  flex-basis: 200px;
+  content: '';
+  display: block;
+  width: 10%;
+  height: 100%;
+  background-color: blanchedalmond;
+}
+
+/* ------ section ------ */
+section {
+  width: 1080px;
+  margin: auto;
+}
+
+section > .l_layout:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.keyword1 {
+  background: url('./images/photo01.png') no-repeat center / cover;
+}
+.keyword2 {
+  background: url('./images/photo02.png') no-repeat center / cover;
+}
+.keyword3 {
+  background: url('./images/photo03.png') no-repeat center/ cover;
+}
+[class^='keyword'] > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(103, 51, 153, 0.5);
+}
+[class^='keyword'] > div > span {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.description {
+  background-color: white;
+  width: 100%;
+  padding: 24px;
+}
+
+.description > h2 {
+  color: #673399;
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+.description li::marker {
+  color: #bd8fe8;
+}
+
+.description li {
+  font-size: 14px;
+  padding: 5px;
+}
+
+section > .l_layout:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+section > .l_layout:last-child {
+  margin-bottom: 100px;
+}
