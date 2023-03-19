@@ -41,13 +41,11 @@ body {
 
 /* ------ header ------ */
 header {
-  box-shadow: inset 0px 0px 0px 2px red;
   width: 1080px;
   margin: 100px auto;
 }
 
 h1 {
-  box-shadow: inset 0px 0px 0px 2px lightcoral;
   font-size: 40px;
   color: white;
   font-weight: 500;
@@ -56,19 +54,26 @@ h1 > span {
   background: linear-gradient(180deg, transparent 50%, orangered 50%);
 }
 p {
-  box-shadow: inset 0px 0px 0px 2px lightcyan;
   font-size: 14px;
+  line-height: 20px;
   color: #bd8fe8;
-  /* position: relative; */
+  display: flex;
 }
+p > span {
+  width: 56%;
+  display: block;
+  min-height: 80px;
+  margin: auto 0 auto 30px;
+}
+
 p::before {
-  /* position: absolute; */
-  flex-basis: 200px;
   content: '';
   display: block;
-  width: 10%;
-  height: 100%;
-  background-color: blanchedalmond;
+  background-color: #bd8fe8;
+  width: 85px;
+  height: 2px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* ------ section ------ */
@@ -119,11 +124,16 @@ section > .l_layout:nth-child(2n) {
 
 .description li::marker {
   color: #bd8fe8;
+  font-size: 10px;
+  content: '\25CF';
 }
 
-.description li {
+.description li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.description li > span {
   font-size: 14px;
-  padding: 5px;
+  margin-left: 10px;
 }
 
 section > .l_layout:not(:last-child) {
