@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 화면 구현</title>
+  <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+  <section class="container">
+    <h1>
+      로그인 또는 회원가입
+      <button class="close"></button>
+    </h1>
+    <span>위니브에서 여러분의 궁금증을 해결하세요! :)</span>
+
+    <input type="text" placeholder="아이디" class="input-id">
+    <input type="password" placeholder="비밀번호" class="input-pw">
+
+    <input type="checkbox" id="maintain-login" class="login-check">
+    <label for="maintain-login" class="login-check-label">로그인 상태 유지</label>
+
+    <button class="button-blue">로그인</button>
+
+    <div class="search-info">
+      <span>회원가입</span>
+      <span>아이디/비밀번호 찾기</span>
+    </div>
+    <span>또는</span>
+
+    <button class="button-google">구글 계정으로 로그인</button>
+    <button class="button-facebook">페이스북 계정으로 로그인</button>
+    <button class="button-naver">네이버 계정으로 로그인</button>
+    <button class="button-kakao">카카오톡 계정으로 로그인</button>
+  </section>
+</body>
+
+</html>

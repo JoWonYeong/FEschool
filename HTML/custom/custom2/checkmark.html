@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>check mark</title>
+  <style>
+    .txt-hide {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+    }
+
+    .labl-hold {
+      display: inline-block;
+      margin: 20px 0;
+      font-size-adjust: 16px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .labl-hold::before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      margin-right: 5px;
+      vertical-align: -5px;
+      border: 1px solid black;
+    }
+
+    /* input에 포커스 됐을 때 형제인 label의 before 가상요소 */
+    /* focus vs focus-visible
+    focus-visible : 키보드로 포커싱 했을 때만 해당 ( 마우스로 포커싱 했을 때는 해당 X - 접근성 살리면서 디자인에 영향 없게 ) */
+    .inp-hold:focus-visible+.labl-hold::before {
+      outline: 2px solid black;
+      outline-offset: 2px;
+    }
+
+    .labl-hold::after {
+      position: absolute;
+      top: 2px;
+      left: 23px;
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background: url('./img//checkmark.png') no-repeat 0 0 / contain;
+      transition: 0.3s ease;
+      opacity: 0;
+    }
+
+    /* input 이 체크됐을 때 형제인 label의 after 가상요소 */
+    .inp-hold:checked+.labl-hold::after {
+      left: 1px;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="inpHold" class="inp-hold txt-hide">
+  <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+</body>
+
+</html>
