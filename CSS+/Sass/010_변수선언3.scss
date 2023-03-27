@@ -1,0 +1,12 @@
+.one {
+  // 지역변수
+  $value: red;
+  color: $value;
+  .three {
+    background-color: $value;
+  }
+}
+// 여기서는 지역변수 사용 불가능
+// .two {
+//   color: $value;
+// }

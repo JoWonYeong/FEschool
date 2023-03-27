@@ -1,0 +1,14 @@
+.one {
+  font-size: 34px;
+  color: #0ff;
+}
+
+.two {
+  background-color: #0ff;
+  -moz-columns: #000;
+       columns: #000;
+}
+
+.three {
+  color: #f00;
+}/*# sourceMappingURL=008_변수선언.css.map */

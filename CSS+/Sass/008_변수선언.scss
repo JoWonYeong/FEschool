@@ -1,0 +1,18 @@
+$example1: #000;
+$example2: #0ff;
+$예시: #f00;
+$큰글자: 34px;
+
+.one {
+  font-size: $큰글자;
+  color: $example2;
+}
+
+.two {
+  background-color: $example2;
+  columns: $example1;
+}
+
+.three {
+  color: $예시;
+}

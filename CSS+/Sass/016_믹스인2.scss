@@ -1,0 +1,17 @@
+// 믹스인은 원래 외부에서 사용해야함
+// 내부에서 사용X 권장
+.card {
+  @mixin box {
+    width: 100px;
+    height: 100px;
+  }
+  @include box;
+  background-color: blue;
+}
+
+// 내부에서 선언한 mixin 외부에서 사용불가
+
+// .profile {
+//   @include box;
+//   background-color: red;
+// }
