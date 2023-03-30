@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // directory : 요소가 가지고있는 모든 속성성들을 다 보여줌
+    console.dir(data)
+
+    // 콘솔 꾸미기
+    // % + 문자열 : 뒤에 css로 문자열 꾸며줌
+    // https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+
+    console.log("%chello world", "color:red;font-size:32px");
+    console.log(
+      "%chello world%chello",
+      "color:red;font-size:32px",
+      "color:blue;font-size:16px"
+    );
+
+    // 콘솔에 table 찍기
+    let data = {
+      a: 10,
+      b: 20,
+      c: 30
+    }
+    let data2 = [10, 20, 30]
+    console.table(data)
+    console.table(data2)
+
+
+  </script>
+</body>
+
+</html>
