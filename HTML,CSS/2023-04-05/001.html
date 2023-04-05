@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 이미지, 배경</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    /* cover 사용 */
+
+    /* article {
+      width: 100vw;
+      height: 100vh;
+      background: url(https://via.placeholder.com/500x500) no-repeat center/ cover;
+    } */
+
+    /* contain 사용 */
+    /* 흰 부분 색깔 넣어서 자연스럽게 연결 */
+    article {
+      width: 100vw;
+      height: 100vh;
+      background: url(https://cdn.discordapp.com/attachments/1073462797645656110/1093004417403469884/logo_google.jpeg) black no-repeat center/ contain;
+    }
+
+    img {
+      /* 이미지의 최대너비: 이미지의 원본 사이즈 */
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <article>
+
+  </article>
+  <!-- <img src="https://via.placeholder.com/500x500" alt=""> -->
+</body>
+
+</html>
