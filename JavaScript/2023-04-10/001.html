@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 300px;
+      box-shadow: inset 0px 0px 0px 2px black;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .gray {
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <ul>
+    <li><button class="btn-red">빨강</button></li>
+    <li><button class="btn-yellow">노랑</button></li>
+    <li><button class="btn-green">초록</button></li>
+  </ul>
+
+  <button class="test">토글</button>
+
+  <script>
+    const box = document.querySelector('.box');
+    const btns = document.querySelectorAll('button[class^="btn"]');
+
+    btns.forEach((item) => {
+      item.addEventListener('click', () => {
+        box.classList.remove('red', 'yellow', 'green');
+        if (item.classList.contains('btn-red')) {
+          box.classList.add('red')
+        } else if (item.classList.contains('btn-yellow')) {
+          box.classList.add('yellow')
+        } else {
+          box.classList.add('green')
+        }
+      })
+    })
+  </script>
+
+  <!-- toggle test -->
+  <script>
+    const test = document.querySelector('.test');
+    test.addEventListener('click', function () {
+      box.classList.toggle('gray')
+    })
+  </script>
+</body>
+
+</html>

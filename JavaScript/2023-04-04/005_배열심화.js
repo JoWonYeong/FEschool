@@ -26,17 +26,17 @@ arr2.filter(function (el) {
 // 모음 제거
 Array.from('hello world').filter((v) => !['a', 'e', 'i', 'o', 'u'].includes(v));
 
-// reduce
+// ========== reduce ==========
 // arr.reduce((축적되는변수, 현재값) => 축적되는변수 + 현재값, 축적되는 변수의 초기값)
 const arr3 = [1, 2, 3, 4, 5, 6];
 // arr3 배열 전체 합 구하기
 arr3.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
-// join
+// ========== join ==========
 const arr4 = ['hello', 'world', 'wswy'];
 arr4.join(' ');
 
-// sort
+// ========== sort ==========
 const nums = [3, 1, 11, 8, 6];
 
 // 오름차순

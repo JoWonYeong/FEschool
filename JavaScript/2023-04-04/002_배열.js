@@ -39,6 +39,8 @@ console.log(myArray2);
 
 // 5. ========== splice ==========
 // arr.splice(start, deleteCount, items)
+// 원본 값 변경
+
 const arr2 = [1, 2, 3];
 arr2.splice(1, 0, 4); // arr에 1번째에, 아무것도 삭제하지 않고, 4를 넣겠다.
 
@@ -52,13 +54,12 @@ const arr5 = [1, 2, 3];
 arr5.splice(1, 0, 10, 20, 30); // arr에 1번째에, 아무것도 삭제하지 않고, 10, 20, 30를 넣겠다.
 
 // 문제
-// ||를 사용해서 답변해주세요.
 const arr6 = [10, 20, 30, 40, 50];
 const x = [1, 2, 3];
 // 만들고 싶은 값 == [10, 1, 2, 3, 20, 30, 40, 1, 2, 3, 50]
 arr6.splice(1, 0, ...x);
 arr6.splice(7, 0, ...x);
-// arr.splice().splice() // 메서드 체이닝이 안되는 이유는 splice는 삭제된 값을 반환합니다.
+// arr.splice().splice() // 메서드 체이닝이 안되는 이유 : splice는 삭제된 값을 반환
 
 const arr7 = [10, 20, 30, 40, 50];
 arr7.splice(2, 1, 5); // arr에 2번째에, 1개를 삭제하고, 5를 넣는다.
