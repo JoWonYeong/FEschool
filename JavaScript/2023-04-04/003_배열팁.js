@@ -63,3 +63,7 @@ tip10.splice(2, 0, 1000); // [1, 2, 1000, 3, 4, 5]
 const tip11 = Array(100)
   .fill(0)
   .map((v, i) => i + 1);
+
+Math.max(...[10, 20, 30]);
+Math.min(...[10, 20, 30]);
+Math.max(...[10, 20, 30, [11, 12, 13, [29, 40, 50]]].flat(Infinity));
