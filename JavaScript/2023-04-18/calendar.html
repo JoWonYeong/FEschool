@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #calendar {
+      display: inline-block;
+      padding: 20px;
+      background: #333;
+      text-align: center;
+      color: #fff;
+    }
+
+    #calendar table {
+      border-collapse: collapse;
+    }
+
+    caption {
+      font-size: 25px;
+      color: orange;
+      margin: 10px;
+    }
+
+    th,
+    td {
+      padding: 20px;
+      border: 1px solid #666;
+    }
+
+    th:first-child,
+    td:first-child {
+      color: red;
+    }
+
+    .prev,
+    .next {
+      color: inherit;
+      padding: 10px;
+      margin: 5px;
+      background-color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <article id="calendar">
+    <h2>나의 멋진 HTML 달력</h2>
+    <table>
+      <caption>
+        <time datetime="">
+          <span class="year"></span>년
+          <span class="month"></span>월
+        </time>
+      </caption>
+      <tr>
+        <th scope="col">일</th>
+        <th scope="col">월</th>
+        <th scope="col">화</th>
+        <th scope="col">수</th>
+        <th scope="col">목</th>
+        <th scope="col">금</th>
+        <th scope="col">토</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <button type="button" class="prev">이전달</button>
+    <button type="button" class="next">다음달</button>
+  </article>
+
+  <script>
+    let now = new Date();
+    let year = now.getFullYear();
+    let month = now.getMonth() + 1;
+
+    calendar(year, month);
+
+    const btns = document.querySelectorAll('button');
+
+    btns.forEach((a, i) => {
+      a.addEventListener('click', () => {
+        if (a.classList.contains('prev')) {
+          // 이전 버튼 누른 경우
+          // month가 바뀌면서 자동으로 year도 반영됨
+          calendar(year, --month)
+        } else {
+          // 다음 버튼 누른 경우
+          calendar(year, ++month)
+        }
+      })
+    })
+
+    function calendar(newYear, newMonth) {
+      // 1. 해당 달의 1일 정보 받아서 1일이 무슨 요일인지 
+      const time = new Date(newYear, newMonth - 1, 1);
+
+      // 2. 해당 달이 총 며칠인지 
+      // Date 객체의 날짜 부분에 원래 날짜보다 더 큰 수를 넣었을 때 다음 달로 넘어간다
+      // const timeLength = 32 - new Date(year, month - 1, 32).getDate();
+      // Date 객체의 날짜 부분에 0을 넣었을 때 이전 달로 넘어간다
+      const timeLength = new Date(newYear, newMonth, 0).getDate();
+
+      let year = time.getFullYear();
+      let month = time.getMonth();
+      let date = time.getDate();
+      let day = time.getDay();
+
+      const captionYear = document.querySelector('.year');
+      const captionMonth = document.querySelector('.month');
+      const timeEl = document.querySelector('time');
+      const days = document.querySelectorAll('tr td');
+
+      for (let i = 0; i < days.length; i++) {
+        days[i].innerHTML = "&nbsp"
+      }
+
+      for (let i = day; i < day + timeLength; i++) {
+        days[i].textContent = date++;
+      }
+
+      captionYear.textContent = year;
+      captionMonth.textContent = month + 1;
+      timeEl.dateTime = `${year}-${month + 1}`;
+    }
+  </script>
+</body>
+
+</html>

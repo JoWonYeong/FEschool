@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <script>
+
+    // setItem(키, 밸류) : 데이터 저장하기
+    // getItem(키) : 키에 저장된 데이터 읽어오기
+    // removeItem(키) : 키에 해당하는 데이터 삭제
+    // clear() : 모든 데이터 삭제
+
+    localStorage.setItem('키1', '밸류1')
+
+    // 로컬스토리지의 키값 중복 불가능
+    // 로컬스토리지 값 저장할 때 문자열로 변환해야함
+    const test = {
+      'one': 'test1',
+      'two': 'test2'
+    };
+    localStorage.setItem('키2', test) // 문자열 변환X - Object로 들어감
+    localStorage.setItem('키3', JSON.stringify(test)) // 문자열 변환O - 객체 값으로 들어감
+
+    console.log(localStorage.getItem('키3'));
+    console.log(JSON.parse(localStorage.getItem('키3')));
+
+
+    // key(index) – 인덱스(index)에 해당하는 키 호출
+    // length – 저장된 항목의 개수
+  </script>
+</body>
+
+</html>
