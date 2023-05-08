@@ -46,9 +46,9 @@
     function scrollHandler() {
       // 현재 스크롤된 위치 까지의 높이값
       const scrollTop = document.documentElement.scrollTop;
-      // 실제 스크롤될 수 있는 전체 높이값
+      // 스크롤될 수 있는 전체 높이값
       const scrollHeight = document.documentElement.scrollHeight;
-      // 현재 보이는 화면(뷰포트)의 높이값
+      // 화면(뷰포트)의 높이값
       const clientHeight = document.documentElement.clientHeight;
 
       // scrollHeight - clientHeight : 스크롤할 수 있는 전체 높이값에서 현재 화면높이만큼 빼 줘야지 가장 밑의 스크롤까지 갔을 때 100%가 됨
